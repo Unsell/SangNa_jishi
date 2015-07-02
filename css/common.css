@@ -1,0 +1,83 @@
+body{
+	font-family: "Microsoft YaHei","iconfont"  !important;
+	background: #FAF1E9;
+}
+.bold{
+	font-weight: bold;
+}
+/*header*/
+.mui-bar-nav{
+	background: #FAF1E9;
+	box-shadow:none
+}
+.mui-title{
+	letter-spacing: 2px;
+	color: #6A6A74;
+}
+.mui-bar-nav .mui-icon{
+	color: #656570;
+}
+.mui-pull-right{
+	height: 40px;
+	width: 40px;
+	text-align: right;
+}
+/*内容主题框*/
+.mui-content{
+	/*position: relative;*/
+	background: #FAF1E9;
+}
+.mt30{
+	margin-top: 30px;
+}
+
+/*输入框*/
+.infor{
+	margin-top: 1px;
+	width: 100%;
+	height: 40px;
+	background: white;
+	position: relative;
+	
+}
+.infor .mui-icon{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 17px;
+	line-height: 40px;
+	color: #70CAEC;
+	margin-left: 5px;
+}
+.infor span{
+	
+}
+.infor input{
+	border-color: white;
+	display: inline-block;
+	line-height: 20px;
+	padding-left: 30px;
+	border-radius: 0;
+	border: 1px solid #E6D3C3;
+}
+input::-webkit-input-placeholder {
+	color: #A1A1A1 !important; 
+	font-size: 14px;
+}
+input:focus{
+	border: 1px solid #41D7B0;
+	/*border-radius: 0;*/
+}
+
+/*提交按钮*/
+.public_btn{
+	border: none;
+	width: 76%;
+	background: #01CA98;
+	margin: 0 12%;
+	letter-spacing: 5px;
+	padding: 8px 20px;
+	font-size: 14px;
+	color: white;
+	text-align: center;
+}

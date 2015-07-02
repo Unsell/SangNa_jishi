@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/iconfont.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/YeJi.css" rel="stylesheet"/>
+		<title>技师状态</title>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">业绩</h1>
+		</header>
+		<div class="mui-content">
+			<div class="box_status">
+				<div class="box_time">
+					<canvas id="canvas_1" height="170px"></canvas>
+					<div class="loca_day">
+						<div class="orange">95.5</div>
+						<div class="mui-icon mui-icon-arrowthinup fs15 orange"></div>
+					</div>
+					<div class="type_word">
+						<div class="">上钟时长(30天)</div>
+						<div class="fs10">当前排<span>12</span>位</div>
+					</div>
+					<div class="boundary"></div>
+				</div>
+				<div class="box_appointment">
+					<canvas id="canvas_2" height="170px"></canvas>
+					<div class="loca_day">
+						<div class="green">50</div>
+						<div class="mui-icon mui-icon-arrowthindown fs15 green"></div>
+					</div>
+					<div class="type_word">
+						<div class="">预约次数(30天)</div>
+						<div class="fs10">当前排<span>50</span>位</div>
+					</div>
+					<div class="boundary"></div>
+				</div>
+				<div class="box_satisfaction">
+					<canvas id="canvas_3"height="170px"></canvas>
+					<div class="loca_day">
+						<div class="blue">95.5%</div>
+						<div class="mui-icon mui-icon-arrowthinup fs15 blue"></div>
+					</div>
+					<div class="type_word">
+						<div class="">满意度</div>
+						<div class="fs10">当前排<span>10</span>位</div>
+					</div>
+				</div>
+			</div>
+			<div class="box_collect">
+				<div class="infor">
+					<span class="mui-icon iconfont icon-dian"></span>
+					<span class="pl7">收藏</span>
+					<span class="float">580</span>
+				</div>
+			</div>
+			<div class="box_collect">
+				<div class="infor">
+					<span class="mui-icon iconfont icon-dian"></span>
+					<span class="pl7">好评</span>
+					<span class="float">力道十足</span>
+				</div>
+			</div>
+			<div class="evaluate">
+				<div class="eva_title">客户评价</div>
+				<div class="box">
+					<canvas id="canvas_4" style="width: 100%;height: 100%;"></canvas>
+					<span class="loca_1">服务</span>
+					<span class="loca_2">手法</span>
+					<span class="loca_3">力度</span>
+					<span class="loca_4">穴位</span>
+					<div class="loca_5 white">
+						<span class="">95</span>
+						<div>%</div>
+					</div>
+					<div class="loca_6 white">
+						<span class="">88</span>
+						<div>%</div>
+					</div>
+					<div class="loca_7 white">
+						<span class="">85</span>
+						<div>%</div>
+					</div>
+					<div class="loca_8 white">
+					<span class="">90</span>
+						<div>%</div></div>
+					
+				</div>
+				
+			</div>
+		</div>
+		<script>
+			window.onload = function (){
+				var Width = document.body.clientWidth;
+//				圆
+				var canvas_1 = document.getElementById('canvas_1');
+				canvas_1.width = 0.33*Width;
+				var context_1 = canvas_1.getContext("2d");
+				context_1.beginPath();
+				context_1.strokeStyle = "#E9AC42";
+				context_1.lineWidth = 5;
+				context_1.arc(17/100*Width,65,40,0, 0.85*2*Math.PI);
+				context_1.stroke();
+				context_1.closePath();
+				
+				var canvas_2 = document.getElementById('canvas_2');
+				canvas_2.width = 0.33*Width;
+				var context_2 = canvas_2.getContext("2d");
+				context_2.beginPath();
+				context_2.strokeStyle = "#45BC61";
+				context_2.lineWidth = 5;
+				context_2.arc(17/100*Width,65,40,0, 0.75*2*Math.PI);
+				context_2.stroke();
+				context_2.closePath();
+				
+				var canvas_3 = document.getElementById('canvas_3');
+				canvas_3.width = 0.33*Width;
+				var context_3 = canvas_3.getContext("2d");
+				context_3.beginPath();
+				context_3.strokeStyle = "#49ABD5";
+				context_3.lineWidth = 5;
+				context_3.arc(17/100*Width,65,40,0, 0.95*2*Math.PI);
+				context_3.stroke();
+				context_3.closePath();
+				
+//				树状图
+				var canvas_4 = document.getElementById('canvas_4');
+				var context_4 = canvas_4.getContext("2d");
+				
+				context_4.beginPath();
+				context_4.fillStyle = "#EBD9CC";
+				context_4.fillRect(50, 150, 25,-130)
+				context_4.fill();
+				context_4.closePath();
+				
+				context_4.beginPath();
+				context_4.fillStyle = "#B39D8C";
+				var height = -(95/100*130);
+				context_4.fillRect(50, 150, 25,height)
+				context_4.fill();
+				context_4.closePath();
+				
+				context_4.beginPath();
+				context_4.fillStyle = "#EBD9CC";
+				context_4.fillRect(110, 150, 25,-130)
+				context_4.fill();
+				context_4.closePath();
+				
+				context_4.beginPath();
+				context_4.fillStyle = "#B39D8C";
+				var height = -(88/100*130);
+				context_4.fillRect(110, 150, 25,height)
+				context_4.fill();
+				context_4.closePath();
+				
+				
+				context_4.beginPath();
+				context_4.fillStyle = "#EBD9CC";
+				context_4.fillRect(170, 150, 25,-130)
+				context_4.fill();
+				context_4.closePath();
+				
+				context_4.beginPath();
+				context_4.fillStyle = "#B39D8C";
+				var height = -(85/100*130);
+				context_4.fillRect(170, 150, 25,height)
+				context_4.fill();
+				context_4.closePath();
+				
+				context_4.beginPath();
+				context_4.fillStyle = "#EBD9CC";
+				context_4.fillRect(230, 150, 25,-130)
+				context_4.fill();
+				context_4.closePath();
+				
+				context_4.beginPath();
+				context_4.fillStyle = "#B39D8C";
+				var height = -(90/100*130);
+				context_4.fillRect(230, 150, 25,height)
+				context_4.fill();
+				context_4.closePath();
+			}
+		</script>
+	</body>
+</html>

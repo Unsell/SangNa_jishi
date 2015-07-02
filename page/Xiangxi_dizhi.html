@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/Xiugai_Ziliao.css" rel="stylesheet"/>
+		<title>真实姓名</title>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">详细地址</h1>
+			<a class=" mui-pull-right ">保存</a>
+		</header>
+		<div class="mui-content">
+			<div class="infor">
+				<div class="mui-input-row">
+					<input class="mui-input-clear" type="text" placeholder="春风万佳2000号"  />
+				</div>
+			</div>
+		</div>
+		<script>
+			document.querySelector('.mui-pull-right').addEventListener('tap', function() {
+			  //打开真实姓名页面
+			  mui.openWindow({
+			    url: 'Geren_Ziliao.html' 
+			  });
+			});
+		</script>
+	</body>
+</html>

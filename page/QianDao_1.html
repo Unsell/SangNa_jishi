@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/QianDao.css" rel="stylesheet"/>
+		<title>签到确认</title>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">签到确认</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mt30"></div>
+			<div class="infor">
+				<input class="poll_code" type="text" placeholder="请输入您所在会所的注册码" />
+			</div>
+			
+			<button class="mui-btn public_btn">确认</button>
+		</div>
+		<script>
+			$(function(){
+				$('.public_btn').click(function(){
+					mui.openWindow({
+					    url: 'QianDao_2.html'
+					  });
+//					window.location.href='ShangBan.html';
+				})
+			})
+		</script>
+	</body>
+</html>

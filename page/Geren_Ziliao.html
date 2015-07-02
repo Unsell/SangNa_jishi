@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/mui.listpicker.css" rel="stylesheet" />
+	    <link href="../css/mui.poppicker.css" rel="stylesheet" />
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/Geren_Ziliao.css" rel="stylesheet"/>
+		<title>个人资料</title>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">个人资料</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div class="box_1">
+				<a class="mui-navigate-right">
+					<span class="size loca_3">头像</span>
+					<div class="img_border">
+						<img src="../images/2.jpg" width="55px" height="55px" />
+					</div>
+				</a>
+			</div>
+			
+			<div class="infor NiCheng">
+				<a class="mui-navigate-right">
+					<span class="size loca_1">昵称</span>
+					<span class="size loca_2">ANDY</span>
+				</a>
+			</div>
+			<div class="infor Zhenshi_Xingming">
+				<a class="mui-navigate-right">
+					<span class="size loca_1">真实姓名</span>
+					<span class="size loca_2">小三</span>
+				</a>
+			</div>
+			<div class="infor">
+				<span class="size loca_1" >工号</span>
+				<span class="size loca_2">123</span>
+			</div>
+			<div class="infor XingBie">
+				<a class="mui-navigate-right">
+					<span class="size loca_1">性别</span>
+					<span class="size loca_2">女</span>
+				</a>
+			</div>
+			<div class="infor JiGuan">
+				<a class="mui-navigate-right">
+					<span class="size loca_1">籍贯</span>
+					<span class="size loca_2">广东</span>
+				</a>
+			</div>
+			<div class="infor ChuSheng">
+				<a class="mui-navigate-right">
+					<span class="size loca_1">出生</span>
+					<span class="size loca_2">1990-12-13</span>
+				</a>
+			</div>
+			<div class="infor">
+				<span class="size loca_1" >身份证号</span>
+				<span class="size loca_2">441251362124942</span>
+			</div>
+			<div class="box_2">
+				<div class="infor">
+					<span class="size loca">地址</span>
+				</div>
+				<div class="mui-content-padded">
+					<button id='showCityPicker' class="mui-btn mui-btn-block" type='button'>广东省深圳市罗湖区</button>
+				</div>
+				<div class="infor XiangXi_addr">
+					<a class="mui-navigate-right">
+						<span class="size loca_1">详细地址</span>
+						<span class="size loca_2">春风万佳2000号</span>
+					</a>
+				</div>
+			</div>
+			<div class="infor RuZhi">
+				<a class="mui-navigate-right">
+					<span class="size loca_1">入职</span>
+					<span class="size loca_2">2013年12月13号</span>
+				</a>
+			</div>
+			<div class="infor GongZhong">
+				<a class="mui-navigate-right">
+					<span class="size loca_1">工种</span>
+					<span class="size loca_2">按摩师</span>
+				</a>
+			</div>
+			<div class="infor LeiBie">
+				<a class="mui-navigate-right">
+					<span class="size loca_1">类别</span>
+					<span class="size loca_2">美容</span>
+				</a>
+			</div>
+			<div class="infor YuYan">
+				<a class="mui-navigate-right">
+					<span class="size loca_1">语言</span>
+					<span class="size loca_2">普通话、粤语、英语</span>
+				</a>
+			</div>
+			
+			<div class="mui-table-view-cell mui-collapse "><a class="mui-navigate-right size" href="#">项目</a>
+				<div class="mui-collapse-content">
+					<form class="mui-input-row">
+						<div class=" mui-input-row mui-checkbox mui-left">
+							<label>美白保湿护理</label>
+							<input name="checkbox" type="checkbox" >
+						</div>
+						<div class=" mui-input-row mui-checkbox mui-left">
+							<label>玫瑰明眸护理</label>
+							<input name="checkbox" type="checkbox" >
+						</div>
+						<div class=" mui-input-row mui-checkbox mui-left">
+							<label>面部刮那护理</label>
+							<input name="checkbox" type="checkbox">
+						</div>
+						<div class=" mui-input-row mui-checkbox mui-left">
+							<label>娇兰抗皱护理</label>
+							<input name="checkbox" type="checkbox">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="infor XiuGai">
+				<a class="mui-navigate-right">
+					<span class="size loca_1">修改密码</span>
+				</a>
+			</div>
+			<div class="box_3"></div>
+		</div>
+		<script src="../js/mui.listpicker.js"></script>
+		<script src="../js/mui.poppicker.js"></script>
+		<script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					//级联示例
+					var cityPicker = new $.PopPicker({
+						layer: 3
+					}); 
+					cityPicker.setData(cityData);
+					var showCityPickerButton = doc.getElementById('showCityPicker');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker.show(function(items) {
+							showCityPickerButton.innerText = items[0].text + items[1].text;
+						});
+					}, false);
+					
+				});
+			})(mui, document);
+			
+			document.querySelector('.NiCheng').addEventListener('tap', function() {
+			  //打开昵称页面
+			  mui.openWindow({
+			    url: 'NiCheng.html' 
+			  });
+			});
+			document.querySelector('.Zhenshi_Xingming').addEventListener('tap', function() {
+			  //打开真实姓名页面
+			  mui.openWindow({
+			    url: 'Zhenshi_Xingming.html' 
+			  });
+			});
+			document.querySelector('.XingBie').addEventListener('tap', function() {
+			  //打开性别页面
+			  mui.openWindow({
+			    url: 'XingBie.html' 
+			  });
+			});
+			document.querySelector('.JiGuan').addEventListener('tap', function() {
+			  //打开籍贯页面
+			  mui.openWindow({
+			    url: 'JiGuan.html' 
+			  });
+			});
+			document.querySelector('.ChuSheng').addEventListener('tap', function() {
+			  //打开出生日期页面
+			  mui.openWindow({
+			    url: 'ChuShengRiQi.html' 
+			  });
+			});
+			document.querySelector('.XiangXi_addr').addEventListener('tap', function() {
+			  //打开出生日期页面
+			  mui.openWindow({
+			    url: 'Xiangxi_dizhi.html' 
+			  });
+			});
+			document.querySelector('.RuZhi').addEventListener('tap', function() {
+			  //打开入职时间页面
+			  mui.openWindow({
+			    url: 'RuZhi.html' 
+			  });
+			});
+			document.querySelector('.GongZhong').addEventListener('tap', function() {
+			  //打开工种页面
+			  mui.openWindow({
+			    url: 'GongZhong.html' 
+			  });
+			});
+			document.querySelector('.LeiBie').addEventListener('tap', function() {
+			  //打开类别页面
+			  mui.openWindow({
+			    url: 'LeiBie.html' 
+			  });
+			});
+			document.querySelector('.YuYan').addEventListener('tap', function() {
+			  //打开语言页面
+			  mui.openWindow({
+			    url: 'YuYan.html' 
+			  });
+			});
+			document.querySelector('.XiuGai').addEventListener('tap', function() {
+			  //打开修改密码页面
+			  mui.openWindow({
+			    url: 'Xiugai_mima.html' 
+			  });
+			});
+		</script>
+		
+	</body>
+</html>

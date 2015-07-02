@@ -1,0 +1,34 @@
+.infor{
+	line-height: 35px;
+	border-top: 1px solid #E6D3C3;
+	border-bottom: 1px solid #E6D3C3;
+}
+.infor .size{
+	display: inline-block;
+	width: 23%;
+	margin-left: 20px;
+	color: #666666;
+	font-size: 15px;
+}
+.infor .type{
+	margin-left: 8%;
+	font-size: 15px;
+	color: #456BB9;
+	letter-spacing: 1px;
+}
+.infor .sao{
+	margin-left: 34%;
+	font-size: 15px;
+	color: #456BB9;
+}
+.public_btn{
+	margin-top: 100px;
+	
+}
+
+
+
+
+
+
+

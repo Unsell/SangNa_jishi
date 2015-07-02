@@ -1,0 +1,39 @@
+
+.size{
+	color: #938799;
+	letter-spacing: 2px;
+	font-size: 14px;
+	position: absolute;
+	top: 8px;
+	left: 10px;
+}
+.input_size[type=password]{
+	display: inline;
+	width: 100%;
+	border: none;
+	height: 39px;
+	text-align: right;
+	border: 1px solid #E6D3C3;
+}
+.input_size_2[type=password]{
+	display: inline;
+	width: 100%;
+	border: none;
+	height: 39px;
+	text-align: right;
+	border: 1px solid #E6D3C3;
+}
+.public_btn{
+	margin-top: 40px;
+}
+input[type=password]:focus{
+	border: 1px solid #41D7B0;
+}
+
+
+
+
+
+
+
+

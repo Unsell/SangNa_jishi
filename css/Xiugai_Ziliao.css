@@ -1,0 +1,24 @@
+
+.mui-bar .mui-pull-right{
+	font-size: 14px;
+	text-decoration:underline;
+	line-height: 40px;
+	color: #0A7D61;
+	letter-spacing: 1px;
+}
+
+
+.mui-icon-clear:before{
+	position: absolute;
+	right: 10px ;
+	top: -10px;
+}
+.mui-input-row .mui-input-clear~.mui-icon-clear{
+	width: 100%;
+	color: #CCCCCC;
+}
+
+//修改性别
+.mui-table-view-cell:after{
+	height: 0 !important;
+}

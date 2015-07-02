@@ -1,0 +1,53 @@
+
+
+.mui-bar .mui-pull-right{
+	font-size: 14px;
+	text-decoration:underline;
+	line-height: 40px;
+	color: #0A7D61;
+	letter-spacing: 1px;
+}
+.size{
+	color: #B1AFAF;
+	letter-spacing: 2px;
+	font-size: 14px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.input_size[type=password]{
+	display: inline;
+	width: 100%;
+	border: none;
+	height: 39px;
+	text-align: right;
+	color: #00ACEF;
+}
+.input_size_2[type=password]{
+	display: inline;
+	width: 100%;
+	border: none;
+	height: 39px;
+	text-align: right;
+	color: #00ACEF;
+}
+.mui-btn-negative{
+	border-radius: 0;
+	width: 80%;
+	background: #FF3B3B;
+	margin: 30px 10%;
+	padding: 10px 20px;
+	font-size: 16px;
+	letter-spacing: 3px;
+}
+input[type=password]:focus{
+	border: 1px solid #41D7B0;
+}
+
+
+
+
+
+
+
+

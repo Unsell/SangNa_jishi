@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/jquery-html5Validate.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/iconfont.css" rel="stylesheet"/>
+	    <link href="../css/regsiter.css" rel="stylesheet"/>
+		<title>注册</title>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">注册</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mt30"></div>
+			<form action="" id="testForm" novalidate="novalidate">
+				<div class="infor" >
+					<span class="mui-icon mui-icon-home"></span>
+					<input class="huisuo_id" type="text" placeholder="请选择您所在会所验证码"  id="club"  required=""/>
+					<span class="type_2">扫一扫</span>
+				</div>
+				<div class="infor">
+					<span class="mui-icon iconfont icon-shouji"></span>
+					<input type="tel" placeholder="请输入您的手机号码"   name = "Per[username]" required="" id="user"/>
+				</div>
+				<div class="infor">
+					<span class="mui-icon iconfont icon-mima"></span>
+					<input type="password" placeholder="请输入您的密码"  data-min="6" name = "Form[password]" required="" id="pwd"/>
+				</div>
+				<div class="infor_2">
+					<span class="mui-icon mui-icon-locked"></span>
+					<input type="text" placeholder="请输入验证码"    required=""/  id="verify">
+				</div>
+				<button id="btn" class="mui-btn mui-btn-primary" type="button">获取验证码</button>
+				<button id="submit" class="mui-btn public_btn">立即验证</button>
+			</form> 
+		</div>
+		<script>
+		
+		/*
+		 * t 类型
+		 * r 内容
+		 * f 文件格式
+		 * */
+		
+		function scaned( t, r, f ) {
+			document.getElementById('club').value = r;
+		}
+		
+		 function plusReady(){
+            // 在这里调用plus api
+            $("#submit").one('click',function(){
+			var rs =  plus.storage.getItem("club_code");
+			//正则验证
+			$("#testForm").html5Validate(function() {
+			 var user = document.querySelector("#user").value,
+				 pwd = document.querySelector("#pwd").value;
+				 verify = document.querySelector('#verify').value;
+				 rs  = document.querySelector('#club').value;
+			   //ajax
+				   mui.post('http://192.168.1.99:3000/tech/register',{user: user,pwd: pwd,club_code: rs,verify:verify},function(data){
+					if(data=='验证码错误'){
+						plus.nativeUI.alert(data);
+						}
+					 else if(data=='用户名已经存在'){
+					 	plus.nativeUI.alert(data);
+					 }
+					 else{
+					 	localStorage.setItem('tech_id', data[0]['id']);
+					 	localStorage.setItem('tech_user_id', data[0]['user_id']);
+					   	mui.openWindow({
+					   		url:'Improve_infor.html'
+					   	})
+					 }
+					 
+					})
+			
+			});
+		
+		})
+        }
+        if(window.plus){
+            plusReady();
+        }else{
+            document.addEventListener('plusready',plusReady,false);
+        }
+        
+		//立即验证
+		
+
+			document.querySelector('.type_2').addEventListener('tap', function() {
+				 //打开扫描二维码
+				  mui.openWindow({
+				    url: 'new_file.html' 
+				  });
+			});
+			//倒计时
+			document.getElementById("btn").addEventListener("click",function(){
+				    var user = $("#user");
+				    var user_val=$('#user').val();
+				    if ($.html5Validate.isAllpass(user)) {
+			   		 //ajax 短信验证
+				   mui.post('http://192.168.1.99:3000/tech/verify',{user:user_val},function(data){
+				   if(data){
+				   			plus.nativeUI.alert('用户名已经被注册!','','提示','请更改新用户注册');
+				   	}else{
+				   		var count = 60;
+			                var countdown = setInterval(CountDown, 1000)   
+			                function CountDown() {
+			                	
+			                		if(count>0){
+			    			 			$('#btn').attr('disabled','disabled');
+				    			 	}else{
+				    			 		$('#btn').removeAttr('disabled');
+				    			 	}
+				    			 	
+			                    $("#btn").html( count + " 秒");
+			                    if (count == 0) {
+			                    		$("#btn").html('获取验证码');
+			                        clearInterval(countdown);
+			                    }
+			                    count--;
+			                }
+				   	}
+			
+			   	})
+//倒计时
+				   
+			   }
+				    
+						
+					
+			});
+			
+		</script>
+	</body>
+</html>

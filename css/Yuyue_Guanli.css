@@ -1,0 +1,128 @@
+.mui-content>.mui-table-view:first-child {
+margin-top: 0;
+}
+
+.mui-table-view{
+	background: #FAF1E9;
+}
+.mui-table-view-cell{
+	padding: 0;
+	
+	
+}
+.mui-table-view>li{
+	margin-bottom: 3px;
+}
+
+.mui-slider-handle{
+	color: #938799;
+}
+
+.technician_name{
+	padding-top: 5px;
+	border-bottom: 1px solid #E6D9D0;
+}
+.fz48{
+	font-size: 48px !important;
+}
+.fz40{
+	font-size: 40px !important;
+	position: absolute;
+	top:0;
+	right: 2%;
+}
+.fs15{
+	font-size: 15px;
+	z-index: 3;
+}
+.fs12{
+	font-size: 12px;
+}
+.fs18{
+	font-size: 18px;
+}
+
+.technician_infor {
+	padding-left: 20px;
+	padding-bottom: 3px;
+}
+.technician_infor .iconfont{
+	color: #70CAEC;
+}
+
+/*弹窗*/
+body{
+	position: relative;
+}
+#ShangBao{
+	position: absolute;
+	top: 50px !important;
+	color: #999999;
+	padding: 3% 3%;
+	width: 80%;
+	height: 350px;
+	background: white;
+	border-radius: 10px;
+	/*overflow: auto;*/
+}
+.head{
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 2px;
+	margin-bottom: 10px;
+}
+
+.infor{
+	/*border: 1px solid #B3B3B3 !important;*/
+	position: relative;
+	margin-bottom: 3%;
+}
+.loca_1{
+	position: absolute;
+	top: 10px;
+	left: 8px;
+}
+.loca_2{
+	position: absolute;
+	top: 10px;
+	left: 70px;
+}
+.infor .input_size{
+	border: 1px solid #B3B3B3;
+	padding-left: 75px;
+	
+}
+.infor input:focus{
+	border: 1px solid #41D7B0;
+	/*border-radius: 0;*/
+}
+
+.public_btn{
+	margin-top: 20px;
+}
+.ls{
+	letter-spacing: 30px;
+}
+.infor_2{
+	border: 1px solid #B3B3B3;
+}
+.infor_2 select{
+	height: 36px;
+	padding-left: 80px;
+	line-height: 16px;
+}
+.number{
+	padding-left: 80px;
+	line-height: 40px;
+}
+.btn{
+	width: 100%;
+	height: 40px;
+	line-height: 20px;
+	border-radius: 0;
+	font-size: 15px;
+	color: #A1A1A1;
+	padding-left: 20px !important;
+}
+
+
+

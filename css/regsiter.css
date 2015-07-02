@@ -1,0 +1,74 @@
+
+.infor .huisuo_id{
+	width: 75%;
+	border: none;
+}
+.infor .type_2{
+	width: 25%;
+	font-size: 15px;
+	letter-spacing: 2px;
+	height: 40px;
+	border-left:1px solid #dedede;
+	border-radius: 0;
+	padding-left: 5%;
+	color: #6699FF;
+	text-decoration: underline;
+}
+.infor_2{
+	margin-top: 1px;
+	height: 40px;
+	width: 73%;
+	background: white;
+	position: relative;
+	
+}
+.infor_2 span{
+	font-size: 17px;
+	line-height: 20px;
+	color: #70CAEC;
+	margin-left: 5px;
+}
+.infor_2 input{
+	border: none;
+	display: inline;
+	width: 100%;
+	line-height: 20px;
+	padding-left: 30px;
+	border-radius: 0;
+	border: 1px solid #E6D3C3;
+}
+input:focus{
+	border: 1px solid #41D7B0;
+	/*border-radius: 0;*/
+}
+.infor_2 .mui-icon{
+	position: absolute;
+	left: 0;
+	top: 10px;
+}
+ .mui-btn-primary{
+	width: 27%;
+	font-size: 13px;
+	letter-spacing: 2px;
+	height: 39px;
+	padding: 5px;
+	position: absolute;
+	right: 0;
+	top: 197px;
+	border-radius: 0;
+	background: #6699FF;
+}
+.public_btn{
+	margin-top: 60px;
+}
+
+.huisuo_id{
+	margin-left: 10px;
+}
+
+
+
+
+
+
+

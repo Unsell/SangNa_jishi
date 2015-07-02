@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/XiaZhong.css" rel="stylesheet"/>
+		<title>下钟</title>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">下钟</h1>
+		</header>
+		<div class="mui-content">
+			<div class="infor">
+				<span class="size">客人手牌</span>
+				<span class="type">213452</span>
+			</div>
+			<div class="infor">
+				<span class="size">微信号</span>
+				<span class="type">LEE</span>
+				<span class="sao">扫一扫</span>
+			</div>
+			<button class="mui-btn public_btn">确认下钟</button>
+		</div>
+		<script>
+			document.querySelector('.sao').addEventListener('tap', function() {
+			  //打开扫描二维码
+			  mui.openWindow({
+			    url: 'new_file.html' 
+			  });
+			});
+			$(function(){
+				$('.public_btn').click(function(){
+					mui.openWindow({
+					    url: 'Jishi_Zhuangtai.html'
+					  });
+//					window.location.href='ZhuangTai_gaibian.html';
+				})
+			})
+		</script>
+	</body>
+</html>

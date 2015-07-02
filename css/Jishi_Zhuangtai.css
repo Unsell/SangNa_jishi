@@ -1,0 +1,111 @@
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+/*侧边菜单*/
+.content{
+	width: 102px;
+	height: 102px;
+	border-radius: 50%;
+	background:#1FBBA6 ;
+	margin: 10% auto;
+	
+}
+.content img{
+	width:100px;
+	height: 100px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	margin:1px 1px;
+}
+
+.title{
+	background:#1FBBA6;
+	height: 30px;
+	width: 40%;
+	line-height: 30px;
+	text-align: center;
+	color: #000000;
+	border-radius: 5px;
+	margin: 20px auto;
+}
+..function_lists {
+	list-style-type: none;
+}
+.function_lists li{
+	height: 40px;
+	border-bottom:1px solid #242424;
+	text-align: center;
+	line-height: 40px;
+	list-style-type: none;
+}
+.function_lists li a{
+	color:#1FBBA6;
+	display: block;
+}
+
+
+
+
+
+/*主页面*/
+.mui-bar-nav~.mui-content{
+	padding-top: 20px;
+}
+.mui-content{
+	background: white;
+	box-shadow: 0 10px 6px -4px #ECDED5 ;
+	width: 90%;
+	height: 400px;
+	margin: 50px 5% 0;
+	border-radius: 5px;
+}
+.mui-content img{
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
+}
+.best{
+	padding-top: 10px;
+	/*background: red;*/
+	width: 85px;
+	margin: 0 auto;
+	color: #666666;
+	font-size: 20px;
+}
+.state{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+.box{
+	float: left;
+	width: 33.3%;
+	height: 110px;
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+	margin-top: 30px;
+}
+.orange{
+	background: #FFBA45;
+}
+.green{
+	background: #40C862;
+}
+.blue{
+	background: #4EB9E6;
+}
+.fs24{
+	font-size: 24px;
+}
+.fs11{
+	font-size: 11px;
+}
+.fs15{
+	font-size: 15px;
+}
+.bold{
+	font-weight: bold;
+}
+.public_btn{
+	margin-bottom: 20px;
+}

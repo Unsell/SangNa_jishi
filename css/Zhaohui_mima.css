@@ -1,0 +1,50 @@
+
+
+
+.infor_2{
+	margin-top: 1px;
+	height: 40px;
+	width: 73%;
+	background: white;
+	position: relative;
+}
+.infor_2 .mui-icon{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.infor_2 span{
+	font-size: 17px;
+	line-height: 40px;
+	color: #70CAEC;
+	margin-left: 5px;
+}
+.infor_2 input{
+	border-color: white;
+	display: inline;
+	width: 100%;
+	line-height: 20px;
+	padding-left: 30px;
+	border: 1px solid #E6D3C3;
+}
+ .mui-btn-primary{
+	width: 27%;
+	font-size: 13px;
+	letter-spacing: 2px;
+	height: 40px;
+	padding: 5px;
+	position: absolute;
+	right: 1px;
+	top: 114px;
+	border-radius: 0;
+	background: #6699FF;
+}
+.public_btn{
+	margin-top: 40px;
+}
+
+
+input:focus{
+	border: 1px solid #41D7B0;
+}
+

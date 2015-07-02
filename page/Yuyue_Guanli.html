@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="../js/jquery-2.1.0.js"></script>
+	    		<script src="../js/jquery-html5Validate.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <script src="../js/base.js" type="text/javascript" charset="utf-8"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/iconfont.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/Yuyue_Guanli.css" rel="stylesheet"/>
+	    <link href="../css/mui.listpicker.css" rel="stylesheet" />
+		<link href="../css/mui.dtpicker.css" rel="stylesheet" />
+		<title>预约管理</title>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">预约管理</h1>
+			<a href="#ShangBao" class="mui-icon mui-icon-plusempty mui-pull-right bold"></a>
+		</header>
+		<div class="mui-content" >
+			<ul id="OA_task_1" class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-blue">
+							<span class="mui-icon mui-icon-closeempty fz48"></span>
+						</a>
+					</div>
+					<div class="mui-slider-handle">
+						<div class="technician_name">
+							<span class="mui-icon iconfont icon-dian fs15"></span>
+							<span class="name fs15">刘小姐</span>
+							（<span class="method fs12">前台</span>）
+						</div>
+						<div class="technician_infor">
+							<span class="mui-icon iconfont icon-shouji fs15"></span>
+							<span class="fs12 phone">13456534572</span>
+							<br />
+							<span class="mui-icon iconfont icon-time fs15"></span>
+							<span class="fs12">2014-06-15 18:00</span>
+						</div>
+					</div>
+				</li>
+				
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-blue">
+							<span class="mui-icon mui-icon-closeempty fz48"></span>
+						</a>
+					</div>
+					<div class="mui-slider-handle">
+						<div class="technician_name">
+							<span class="mui-icon iconfont icon-dian fs15"></span>
+							<span class="name fs15">刘小姐</span>
+							（<span class="method fs12">前台</span>）
+						</div>
+						<div class="technician_infor">
+							<span class="mui-icon iconfont icon-shouji fs15"></span>
+							<span class="fs12 phone">13456534572</span>
+							<br />
+							<span class="mui-icon iconfont icon-time fs15"></span>
+							<span class="fs12">2014-06-15 18:00</span>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-blue">
+							<span class="mui-icon mui-icon-closeempty fz48"></span>
+						</a>
+					</div>
+					<div class="mui-slider-handle">
+						<div class="technician_name">
+							<span class="mui-icon iconfont icon-dian fs15"></span>
+							<span class="name fs15">刘小姐</span>
+							（<span class="method fs12">前台</span>）
+						</div>
+						<div class="technician_infor">
+							<span class="mui-icon iconfont icon-shouji fs15"></span>
+							<span class="fs12 phone">13456534572</span>
+							<br />
+							<span class="mui-icon iconfont icon-time fs15"></span>
+							<span class="fs12">2014-06-15 18:00</span>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-blue">
+							<span class="mui-icon mui-icon-closeempty fz48"></span>
+						</a>
+					</div>
+					<div class="mui-slider-handle">
+						<div class="technician_name">
+							<span class="mui-icon iconfont icon-dian fs15"></span>
+							<span class="name fs15">刘小姐</span>
+							（<span class="method fs12">前台</span>）
+						</div>
+						<div class="technician_infor">
+							<span class="mui-icon iconfont icon-shouji fs15"></span>
+							<span class="fs12 phone">13456534572</span>
+							<br />
+							<span class="mui-icon iconfont icon-time fs15"></span>
+							<span class="fs12">2014-06-15 18:00</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--弹窗class="mui-popover mui-popover-action "-->
+		<div id="ShangBao" class="mui-popover mui-popover-action ">
+			<div class="head">
+				<span class="fs18">上报预约</span>
+				<span class="mui-pull-right mui-icon mui-icon-closeempty fz40"></span>
+			</div>
+			<form   id="testForm" novalidate="novalidate">
+				<div class="infor infor_2">
+					<span class="loca_1 fs15">技师工号</span>
+					<span class="loca_2 fs15">:</span>
+					<span class="number" id="job_number">123</span>
+				</div>
+				<div class="infor">
+					<span class="loca_1 fs15 ls">客户</span>
+					<span class="loca_2 fs15">:</span>
+					<input class="input_size" type="text" required="" id="client_name"/>
+				</div>
+				<div class="infor">
+					<span class="loca_1 fs15 ls">时间</span>
+					<span class="loca_2 fs15">:</span>
+					<button id='demo1' data-options='{}' type="button" class="input_size  mui-btn btn " ></button>
+				</div>
+				<div class="infor">
+					<span class="loca_1 fs15 ls">电话</span>
+					<span class="loca_2 fs15">:</span>
+					<input class="input_size" type="tel"  required="" id="tel"/>
+				</div>
+				<div class="infor infor_2 mui-select">
+					<span class="loca_1 fs15 ls">项目</span>
+					<span class="loca_2 fs15">:</span>
+					<select id="project" required="">
+						<option value="">请选择项目</option>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="mercedes">Mercedes</option>
+						<option value="audi">Audi</option>
+					</select>
+				</div>
+				<button class="mui-btn public_btn" id="btn_order">确定</button>
+			</form>
+		
+		</div>
+		<script src="../js/mui.listpicker.js"></script>
+		<script src="../js/mui.dtpicker.js"></script>
+		<script>
+			$(function(){
+				var tech_id = getItem('tech_id');
+				
+				//获取技师项目
+				mui.get('http://192.168.1.99:3000/tech/job',{tech_id:tech_id},function(data){
+					    var str = '<option value="">请选择项目</option>' ;
+						for(var i = 0; i < data.length; i++){
+						 str +='<option value="'+data[i]['id']+'">'+data[i]['name']+'</option>';
+						}
+						$('#project').html(str);
+						
+				});
+				//获取技师工号
+				mui.get('http://192.168.1.99:3000/tech/job_number',{tech_id:tech_id},function(data){
+						alert(data);
+						$('#job_number').text(data);
+				});
+				//	上报预约
+				$('#btn_order').click(function(){
+//					alert(tech_id);
+					   var  job_number = $('#job_number').text(),
+							client_name = $('#client_name').val(),
+							tel = $('#tel').val(),
+							order_time = $('#order_time').val();
+					mui.get('http://192.168.1.99:3000/tech/appointment',{tech_id:tech_id,job_number:job_number,client_name:client_name,tel:tel,order_time:order_time},function(data){
+					
+					});
+				})
+				$('.mui-icon-closeempty').click(function(){
+					$("#ShangBao").hide();
+					$(".mui-backdrop").hide();
+				})
+				
+				
+			})
+			mui.init();
+			(function($) {
+				//$.swipeoutOpen(el,direction)//打开指定列的滑动菜单，el:指定列的dom对象，direction：取值left|right，指定打开的是左侧或右侧滑动菜单
+				//$.swipeoutClose(el);//关闭指定列的滑动菜单，el:指定列的dom对象
+				//				setTimeout(function() {
+				//					$.swipeoutOpen(document.getElementById("OA_task_1").querySelector('li:last-child'), 'left');
+				//					setTimeout(function() {
+				//						$.swipeoutClose(document.getElementById("OA_task_1").querySelector('li:last-child'));
+				//					}, 1000);
+				//				}, 1000);
+				//第一个demo，拖拽后显示操作图标，点击操作图标删除元素；
+				$('#OA_task_1').on('tap', '.mui-btn', function(event) {
+					var elem = this;
+					mui.confirm('确认删除该条记录？', 'Hello MUI', btnArray, function(e) {
+						if (e.index == 0) {
+							var li = elem.parentNode.parentNode;
+							li.parentNode.removeChild(li);
+						}
+					});
+				});
+				var btnArray = ['确认', '取消'];
+				//第二个demo，向左拖拽后显示操作图标，释放后自动触发的业务逻辑
+				$('#OA_task_2').on('slideleft', '.mui-table-view-cell', function(event) {
+					var elem = this;
+					mui.confirm('确认删除该条记录？', 'Hello MUI', btnArray, function(e) {
+						if (e.index == 0) {
+							elem.parentNode.removeChild(elem);
+						}
+					});
+				});
+				//第二个demo，向右拖拽后显示操作图标，释放后自动触发的业务逻辑
+				$('#OA_task_2').on('slideright', '.mui-table-view-cell', function(event) {
+					var elem = this;
+					mui.confirm('确认删除该条记录？', 'Hello MUI', btnArray, function(e) {
+						if (e.index == 0) {
+							elem.parentNode.removeChild(elem);
+						}
+					});
+				});
+				
+				//选择上报预约时间
+				var ddd = $('#demo1')[0];
+				var btns = $('.btn');
+				var pickers = {};
+				btns.each(function(i, btn) {
+//					alert(123);
+					btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						/*
+						 * 首次显示时实例化组件
+						 * 示例为了简洁，将 options 放在了按钮的 dom 上
+						 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+						 */
+						pickers[id] = pickers[id] || new $.DtPicker(options);
+						pickers[id].show(function(rs) {
+							/*
+							 * rs.value 拼合后的 value
+							 * rs.text 拼合后的 text
+							 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+							 * rs.m 月，用法同年
+							 * rs.d 日，用法同年
+							 * rs.h 时，用法同年
+							 * rs.i 分（minutes 的第二个字母），用法同年
+							 */
+//							result.innerText = '选择结果: ' + rs.text;
+							ddd.innerText=rs.text;
+							
+						});
+					}, false);
+				});
+			})(mui);
+		</script>
+	</body>
+</html>
