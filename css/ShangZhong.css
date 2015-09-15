@@ -44,10 +44,11 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 
 
 /*主页面*/
-
+.mui-bar-nav ~ .mui-content {
+  padding-top: 20px;
+}
 .option{
 	overflow: hidden;
-	
 }
 .option a{
 	color: #78695D;
@@ -349,6 +350,9 @@ body{
 .ls{
 	letter-spacing: 30px;
 }
+.ls2{
+	letter-spacing: 9px;
+}
 .infor_2{
 	border: 1px solid #B3B3B3;
 	margin-bottom: 15px;
@@ -363,7 +367,7 @@ body{
 	line-height: 40px;
 }
 .btn_type{
-	width: 49%;
+	width: 48%;
 }
 
 /*弹窗——下钟*/
@@ -375,11 +379,11 @@ body{
 }
 #XiaZhong{
 	position: absolute;
-	top: 200px !important;
+	top: 150px !important;
 	color: #999999;
 	padding: 3% 3%;
 	width: 80%;
-	height: 150px;
+	height: 240px;
 	background: white;
 	border-radius: 10px;
 	text-align: center;
@@ -390,5 +394,6 @@ body{
 	line-height: 18px;
 }
 
-
+.infor input:focus{
+	border: 1px solid #41D7B0 !important;
 

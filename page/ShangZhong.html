@@ -20,6 +20,11 @@
 	<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
 		<!--侧滑菜单部分-->
 		<div class="mui-inner-wrap">
+			<header class="mui-bar mui-bar-nav">
+					<a href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
+				
+					<h1 class="mui-title" >NO.123</h1>
+			</header>
 			<aside id="offCanvasSide" class="mui-off-canvas-left">
 				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
 					<div class="mui-scroll">
@@ -48,12 +53,7 @@
 				</div>
 			</aside>
 			<!--主界面部分-->
-			<div class="mui-inner-wrap">
-				<header class="mui-bar mui-bar-nav">
-					<a href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
-				
-					<h1 class="mui-title" >NO.123</h1>
-				</header>
+			<!--<div class="mui-inner-wrap">-->
 				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
 					<div class="mui-scroll" >
 						<div class="option">
@@ -65,9 +65,7 @@
 								<div class="pie_left"><div class="left"></div></div>
 								<div class="pie_right"><div class="right"></div></div>
 								<div class="mask">
-									<div class="time">60</div>
-									<div>分钟</div>
-									<!--<div>已超时</div>-->
+									
 								</div>
 							</div>
 						</div>
@@ -87,19 +85,20 @@
 						</div>
 					</div>
 				<!-- off-canvas backdrop -->
-				<!--<div class="mui-off-canvas-backdrop">dd</div>-->
-				</div>
 				<div class="mui-off-canvas-backdrop"></div>
-			</div>
+				</div>
+				
+			<!--</div>-->
+			<!--<div class="mui-off-canvas-backdrop"></div>-->
 		</div>
 	</div>
 	
 		<!--弹窗——预约"-->
 		<div id="YuYue" class="mui-popover mui-popover-action ">
-			<button class="mui-btn public_btn position">确定</button>
+			<button class="mui-btn public_btn position clear_YY">确定</button>
 			<div class="head">
 				<span class="fs15 ml10">最近预约</span>
-				<span class="mui-pull-right mui-icon mui-icon-closeempty fz30"></span>
+				<span class="mui-pull-right mui-icon mui-icon-closeempty fz30 clear_YY"></span>
 			</div>
 			<div id="scroll_YuYue" class="pb40 mui-scroll-wrapper">
 				<div class="mui-scroll">
@@ -152,9 +151,9 @@
 		<div id="DingDan" class="mui-popover mui-popover-action ">
 			<div class="head">
 				<span class="fs15 ml10">最近订单</span>
-				<span class="mui-pull-right mui-icon mui-icon-closeempty fz30"></span>
+				<span class="mui-pull-right mui-icon mui-icon-closeempty fz30 clear_DD"></span>
 			</div>
-			<button class="mui-btn public_btn position">确定</button>
+			<button class="mui-btn public_btn position clear_DD">确定</button>
 			<div id="scroll_DingDan" class="pb40 mui-scroll-wrapper">
 				<div class="mui-scroll">
 					<ul class="mui-table-view">
@@ -225,10 +224,6 @@
 					<span class="loca_2 fs15">:</span>
 					<select id="project">
 						<option value="">请选择项目</option>
-						<option value="volvo">Volvo</option>
-						<option value="saab">Saab</option>
-						<option value="mercedes">Mercedes</option>
-						<option value="audi">Audi</option>
 					</select>
 				</div>
 				<div class="infor">
@@ -236,11 +231,19 @@
 					<span class="loca_2 fs15">:</span>
 					<input class="input_size" type="text"  id="protime"/>
 				</div>
-				<button class="mui-btn btn_type cancel">取消</button>
+				<button class="mui-btn btn_type cancel_SZ">取消</button>
 				<button class="mui-btn btn_type start" id="btn-time">确定</button>
 		</div>
 		<!--弹窗——下钟-->
 		<div id="XiaZhong" class="mui-popover mui-popover-action ">
+			<div class="head">
+				<span class="fs18">请输入手牌号：</span>
+			</div>
+			<div class="infor">
+					<span class="loca_1 fs15 ls2">手牌号</span>
+					<span class="loca_2 fs15">:</span>
+					<input class="input_size" type="text"  id=""/>
+				</div>
 			<div class="head">
 				<span class="fs18">选择你下钟之后的状态：</span>
 			</div>
@@ -251,7 +254,7 @@
 					<option value="saab">下班</option>
 				</select>
 			</div>
-			<button class="mui-btn btn_type cancel">取消</button>
+			<button class="mui-btn btn_type cancel_XZ">取消</button>
 			<button class="mui-btn btn_type sure_stop">确定</button>
 		</div>
 		<script>
@@ -269,7 +272,6 @@
 			})(mui);
 			
 			var tech_id = getItem('tech_id');
-			alert(tech_id);
 			//获取技师项目
 			mui.get('http://192.168.1.99:3000/tech/job',{tech_id:tech_id},function(data){
 				    var str = '<option value="">请选择项目</option>' ;
@@ -287,6 +289,7 @@
 					$('#protime').val(data);
 				});
 			})
+			//上钟提交
 
 			document.querySelector('.SignOut').addEventListener('tap', function() {
 			  //退出账号

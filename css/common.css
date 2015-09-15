@@ -1,10 +1,30 @@
+@font-face {
+	
+    font-family: 'stxiheiregular';
+    src: url('../fonts/huawenxihei-webfont.eot');
+    src: url('../fonts/huawenxihei-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/huawenxihei-webfont.woff2') format('woff2'),
+         url('../fonts/huawenxihei-webfont.woff') format('woff'),
+         url('../fonts/huawenxihei-webfont.ttf') format('truetype'),
+         url('../fonts/huawenxihei-webfont.svg#stxiheiregular') format('svg');
+    
+}
+
+.mui-fullscreen{
+	position: fixed;
+	z-index: 20;
+	background-color: #000;
+}
+
 body{
-	font-family: "Microsoft YaHei","iconfont"  !important;
+	/*font-family: "Microsoft YaHei","iconfont"  !important;*/
+	font-family: 'stxiheiregular';
 	background: #FAF1E9;
 }
 .bold{
 	font-weight: bold;
 }
+
 /*header*/
 .mui-bar-nav{
 	background: #FAF1E9;

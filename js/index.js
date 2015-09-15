@@ -1,46 +1,46 @@
 
 $(function() {
-	//点击右上方的×关闭弹出
-	$('.mui-icon-closeempty').click(function(){
-		$('#YuYue').hide();
-		$('#DingDan').hide();
-		$('.mui-backdrop').hide();
+	//点击右上方的×和确定按钮关闭弹出
+	$('.clear_DD').click(function(){
+		mui('#DingDan').popover('hide');
 	})
-	$('.position').click(function(){
-		$('#YuYue').hide();
-		$('#DingDan').hide();
-		$('.mui-backdrop').hide();
+	$('.clear_YY').click(function(){
+		mui('#YuYue').popover('hide');
 	})
-	$('.cancel').click(function(){
-		$('#ShangZhong').hide();
-		$('#XiaZhong').hide();
-		$('.mui-backdrop').hide(); 
+		
+	
+	$('.cancel_SZ').click(function(){
+		mui('#ShangZhong').popover('hide');
 	})
-	$('.xiazhong').click(function(){
-		$('#XiaZhong').show();
-		$('.mui-backdrop').show(); 
+	$('.cancel_XZ').click(function(){
+		mui('#XiaZhong').popover('hide');
 	})
 	
     $('.start').click(function(){
 		var count = 0;
-		var  min=5;
+		var  min = parseInt($('#protime').val());
+		alert(typeof min);
 		var time=60000*min;
-	
+	   $(".mask").html('<div class="time">'+min+'</div>'+'<div>'+'分钟'+'</div>');
 	      var countdown = setInterval(CountDown, time*0.01 );
 	      $('.xiazhong').show();
 	      $('.shangzhong').hide();
 	      $(".xiazhong").css('display','block');
 	      $('#ShangZhong').hide();
 		  $('.mui-backdrop').hide();
-
+		  $('.chaoshi span').html(min);
       function CountDown() {
-            $(".time").html(count);
+            $(".mask").html('<div class="time">'+min+'</div>'+'<div>'+'分钟'+'</div>');
             count++;
             var num=count*3.6;
 
+
+
             function outtime(){
-               $(".chaoshi").html(((count-100)/100*min).toFixed(2));
-               }
+     		  $('.mask').css('color','red');
+            	  $('.chaoshi').html('你已经超时'+((count-100)/100*min).toFixed(2)+'分钟');
+            	  $(".mask").html('<div class="time">'+(((count-100)/100*min+min).toFixed(2))+'</div>'+'<div>'+'分钟'+'</div>'+'<div>'+'已超时'+'</div>');
+             }
                         
            if (num <= 180) {
        						   $('.circle').find('.right').css('transform', "rotate(" + num + "deg)");
@@ -72,8 +72,6 @@ $(function() {
                     $(".circle").css("background","red");
                   }
             if (count == 280) {
-                          // alert("严重超时3")
-                            // clearInterval(countdown);
                  }
                stop();
                 

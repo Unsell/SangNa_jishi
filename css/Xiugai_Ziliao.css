@@ -22,3 +22,24 @@
 .mui-table-view-cell:after{
 	height: 0 !important;
 }
+
+//多选按钮
+
+.mui-table-view-cell{
+	padding: 8px;
+	height: 39px;
+	
+}
+.mui-table-view-cell.mui-checkbox.mui-left{
+  padding-left: 30px;
+  padding-right: 5px;
+  font-size: 13px;
+  width: auto;
+  float: right;
+}
+.mui-checkbox.mui-left input[type=checkbox]{
+  left: 0;
+}
+.mui-table-view-cell:after{
+	height: 0;
+}

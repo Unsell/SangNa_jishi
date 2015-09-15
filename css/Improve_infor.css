@@ -63,19 +63,7 @@ ul,li{
 	text-align: right;
 }
 
-::-webkit-input-placeholder { /* WebKit browsers */ 
-text-align: right;
-} 
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
-text-align: right;
-} 
-::-moz-placeholder { /* Mozilla Firefox 19+ */ 
-text-align: right;
-} 
-:-ms-input-placeholder { /* Internet Explorer 10+ */ 
-text-align: right;
-} 
-input::-webkit-input-placeholder { text-align: right; }
+
 
 .infor input .poll_code{
 	padding-left: 0 !important;
@@ -95,9 +83,9 @@ input::-webkit-input-placeholder { text-align: right; }
 
 .infor input{
 	border: none;
-	margin: 0 1%;
+	margin: 0 0;
 	line-height: 15px;
-	height: 38px;
+	height: 43px;
 	text-align: right;
 	font-size: 15px;
 }

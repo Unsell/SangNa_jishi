@@ -11,6 +11,13 @@
 	    <link href="../css/mui.poppicker.css" rel="stylesheet" />
 	    <link href="../css/common.css" rel="stylesheet"/>
 	    <link href="../css/Geren_Ziliao.css" rel="stylesheet"/>
+	    <style type="text/css">
+	    	.mui-fullscreen{
+				position: fixed;
+				z-index: 20;
+				background-color: #000;
+			}
+	    </style>
 		<title>个人资料</title>
 	</head>
 	<body>
@@ -21,10 +28,10 @@
 		
 		<div class="mui-content">
 			<div class="box_1">
-				<a class="mui-navigate-right">
+				<a class="">
 					<span class="size loca_3">头像</span>
 					<div class="img_border">
-						<img src="../images/2.jpg" width="55px" height="55px" />
+						<img class="mui-action-preview" src="../images/2.jpg" width="55px" height="55px" />
 					</div>
 				</a>
 			</div>
@@ -140,7 +147,38 @@
 		<script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			(function($, doc) {
+				
+				if(window.plus){plusReady();}
+				else{document.addEventListener('plusready',plusReady,false);}
+				
+				function plusReady(){
+					if ('Android' == plus.os.name) {
+						var first = null;
+						mui.back = function() {
+							if (!first) {
+								first = new Date().getTime();
+								mui.toast('再按一次退出应用');
+								setTimeout(function() {
+									first = null;
+									}, 1000);
+							} else {
+								if (new Date().getTime() - first < 1000) {
+									plus.runtime.quit();
+								}
+							}
+						}
+					}
+				
+				}
+
+				
 				$.init();
+//				mui.init({
+//					swipeBack: false,
+//					keyEventBind: {
+//					backbutton: false
+//					}
+//					});
 				$.ready(function() {
 					//级联示例
 					var cityPicker = new $.PopPicker({
@@ -154,7 +192,62 @@
 						});
 					}, false);
 					
+//					//图片放大
+					var imgs = document.querySelectorAll("img.mui-action-preview");
+					imgs = mui.slice.call(imgs);
+					var slider = null;
+					if(imgs&&imgs.length>0){
+						slider = document.createElement("div");
+						slider.setAttribute("id","__mui-imageview__");
+						slider.classList.add("mui-slider");
+						slider.classList.add("mui-fullscreen");
+						slider.style.display = "none";
+						slider.addEventListener("tap",function () {
+							slider.style.display = "none";
+						});
+						slider.addEventListener("touchmove",function (event) {
+							event.preventDefault();
+						})
+						
+						var slider_group = document.createElement("div");
+						slider_group.setAttribute("id","__mui-imageview__group");
+						slider_group.classList.add("mui-slider-group");
+						
+						imgs.forEach(function (value,index,array) {
+							//给图片添加点击事件，触发预览显示；
+							value.addEventListener('tap',function () {
+								slider.style.display = "block";
+								_slider.refresh();
+								_slider.gotoItem(index,0);
+							})
+							
+							var item = document.createElement("div");
+							item.classList.add("mui-slider-item");
+							var a = document.createElement("a");
+							// a.setAttribute("href","#");
+							var img = document.createElement("img");
+							img.setAttribute("src",value.src);
+							a.appendChild(img)
+							item.appendChild(a);
+							slider_group.appendChild(item);
+						});
+						
+						slider.appendChild(slider_group);
+						document.body.appendChild(slider);
+						var _slider = mui(slider).slider();
+					}
+					
+					var oldback = mui.back;
+					mui.back = function () {
+						if(slider&&slider.style.display=="block"){
+							slider.style.display = "none";
+						}else{
+							oldback();
+						}
+					}
 				});
+				
+				
 			})(mui, document);
 			
 			document.querySelector('.NiCheng').addEventListener('tap', function() {

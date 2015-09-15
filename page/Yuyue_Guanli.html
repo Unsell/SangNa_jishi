@@ -117,7 +117,7 @@
 				<span class="fs18">上报预约</span>
 				<span class="mui-pull-right mui-icon mui-icon-closeempty fz40"></span>
 			</div>
-			<form   id="testForm" novalidate="novalidate">
+			<!--<form   id="testForm" novalidate="novalidate">-->
 				<div class="infor infor_2">
 					<span class="loca_1 fs15">技师工号</span>
 					<span class="loca_2 fs15">:</span>
@@ -150,7 +150,7 @@
 					</select>
 				</div>
 				<button class="mui-btn public_btn" id="btn_order">确定</button>
-			</form>
+			<!--</form>-->
 		
 		</div>
 		<script src="../js/mui.listpicker.js"></script>
@@ -184,11 +184,14 @@
 					
 					});
 				})
+//				点击X关闭弹窗
 				$('.mui-icon-closeempty').click(function(){
-					$("#ShangBao").hide();
-					$(".mui-backdrop").hide();
+					mui('#ShangBao').popover('hide');
 				})
-				
+//				点击确定关闭弹窗
+//				$('btn_order').click(function(){
+//					mui('#ShangBao').popover('hide');
+//				})
 				
 			})
 			mui.init();

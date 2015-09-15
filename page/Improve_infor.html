@@ -8,6 +8,7 @@
 	    <link href="../css/mui.min.css" rel="stylesheet"/>
 	    <link href="../css/mui.listpicker.css" rel="stylesheet" />
 	    <link href="../css/mui.poppicker.css" rel="stylesheet" />
+	    <link href="../css/stylesheet.css" rel="stylesheet"/>
 	    <link href="../css/common.css" rel="stylesheet"/>
 	    <link href="../css/Improve_infor.css" rel="stylesheet"/>
 		<title>完善资料</title>
@@ -17,7 +18,6 @@
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">完善资料</h1>
 		</header>
-		
 		<div class="mui-content">
 			<form id="testForm"  method="post">
 				<div class="box_1" id="user_logo">
@@ -26,35 +26,35 @@
 				</div>
 				<div class="infor">
 					<span class="size loca_1">昵称</span>
-					<input type="text" placeholder="ANDY" id="nickname"  required="" style="padding-left: 85%;" id="sex"/>
+					<input type="text" placeholder="" id="nickname"  required="" id="sex"/>
 				</div>
 				<div class="infor" st>
 					<span class="size loca_1">真实姓名</span>
-					<input type="text" placeholder="小三" id="name"  required="" style="padding-left: 85%;" />
+					<input type="text" placeholder="" id="name"  required=""  />
 				</div>
-				<div style="background: #FFFFFF;border-bottom: 1px solid #E8E5E3;color: #938799;font-size: 15px;overflow: hidden;">
+				<div style="background: #FFFFFF;border-bottom: 1px solid #E8E5E3;color: #938799;font-size: 15px;overflow: hidden;margin-top: 1px;">
 					<p style="float: left;margin-top: 10px;margin-left: 10px;" class="size">性别</p>
 					
 					<div class="mui-table-view-cell mui-radio mui-left" style="float: right;" >
 						<input name="radio" type="radio" value="2">女
 					</div>
-					<div class="mui-table-view-cell mui-radio mui-left " style="width: 50px;float: right;margin-left: 40%;">
+					<div class="mui-table-view-cell mui-radio mui-left " style="width: 50px;float: right;">
 						<input name="radio" type="radio" value="1">男
 					</div>
 				</div>		
 				<div class="infor">
 					<span class="size loca_1">工号</span>
-					<input type="text" placeholder="123" id="job_number"   required="" style="padding-left: 85%;"/>
+					<input type="text" placeholder="" id="job_number"   required="" />
 				</div>
 				<div class="infor">
 					<span class="size loca_1">籍贯</span>
-					<input type="text" placeholder="广东省深圳市" id="JiGuan"   required=""style="padding-left: 69%;" readonly=""/>
+					<input type="text" placeholder="" id="JiGuan"   required="" readonly=""/>
 					<input type="hidden" name="" id="na_pr" value=""/>
 					<input type="hidden" name="" id="na_city"/>
 				</div>
 				<div class="infor">
 					<span class="size loca_1">出生</span>
-					<input type="text" placeholder="1990-12-13" id="birth"   required="" style="padding-left: 72%;" readonly=""/>
+					<input type="text" placeholder="" id="birth"   required=""  readonly=""/>
 				</div>
 				<div class="infor">
 					<span class="size loca_1">工种</span>
@@ -68,9 +68,9 @@
 				
 				<div class="infor">
 					<span class="size loca_1">入职</span>
-					<input type="text" placeholder="2013-12-13" id="entry"  required="" style="padding-left: 72%;" readonly=""/>
+					<input type="text" placeholder="" id="entry"  required=""  readonly=""/>
 				</div>
-				<div style="background: #FFFFFF;border-bottom: 1px solid #E8E5E3;color: #938799;font-size: 15px;overflow: hidden;" id="language">
+				<div style="background: #FFFFFF;border-bottom: 1px solid #E8E5E3;color: #938799;font-size: 15px;overflow: hidden;margin-top: 1px;" id="language">
 					<p style="float: left;margin-top: 10px;margin-left: 10px;" class="size">语言</p>
 					<div class=" mui-checkbox mui-left mui-table-view-cell" style="width: 80px;">
 						<input name="checkbox" type="checkbox" value="1">英语
@@ -85,7 +85,7 @@
 				
 				<div class="infor">
 					<span class="size loca_1">身份证号码</span>
-					<input type="text" placeholder="441251362124942" id="ident"  pattern="/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/"  required="" style="padding-left: 60%;"/>
+					<input type="text" placeholder="" id="ident"  pattern="/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/"  required="" />
 				</div>
 				<div class="box_2">
 					<div class="infor">
